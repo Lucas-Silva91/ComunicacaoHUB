@@ -1,9 +1,9 @@
-const db = require ('../database/dbConfig');
+const db = require ('../dbConfig');
 
 const clientSchemma = new db.mongoose.Schema({
 
 
-    Client:{
+    nome:{
         type: String,
         required: true
 

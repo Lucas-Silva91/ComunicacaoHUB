@@ -1,11 +1,11 @@
 const express = require ('express');
 const router = express.Router();
-const Cliente =  require ('../database/clientSchemma')
+const Cliente =  require ('../database/schemma/clientSchemma')
 
 router.get('/', async (req, res, next)=>{
     try {
-        const client = await Client.find();
-        res.status(200).json(client)
+        const cliente = await Cliente.find();
+        res.status(200).json(cliente)
     } catch (error) {
         res.status(500).json({message: error.message})
     }
@@ -13,7 +13,7 @@ router.get('/', async (req, res, next)=>{
 
 router.post('/', async (req, res, next)=>{
     const cliente = new Cliente({
-        cliente: req.body.cliente,
+        nome: req.body.nome,
         cpf: req.body.cpf,
         email: req.body.email,
         trackingID: req.body.trackingID

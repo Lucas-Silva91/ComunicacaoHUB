@@ -1,4 +1,4 @@
-const db = require ('../database/dbConfig');
+const db = require ('../dbConfig');
 
 const ecommerceSchemma = new db.mongoose.Schema({
 
