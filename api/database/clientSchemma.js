@@ -27,7 +27,7 @@ const clientSchemma = new db.mongoose.Schema({
 
     },
 
-    accountDate:{
+    clienteDate:{
         type:Date,
         required: true,
         default: Date.now
@@ -40,4 +40,4 @@ const clientSchemma = new db.mongoose.Schema({
 
 });
 
-module.exports = db.mongoose.model('Client', clientSchemma)
+module.exports = db.mongoose.model('Cliente', clientSchemma)

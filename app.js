@@ -1,10 +1,10 @@
 const express = require ('express');
 const app = express();
 
-const endpointClient = require ('./api/endpoints/client')
+const endpointCliente = require ('./api/endpoints/cliente')
 
 app.use (express.json());
-app.use ('/client', endpointClient)
+app.use ('/cliente', endpointCliente)
 
 
 module.exports = app
