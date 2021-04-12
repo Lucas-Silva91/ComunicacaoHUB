@@ -5,4 +5,9 @@ const app = require ('./app')
 
 const server = http.createServer(app);
 
-server.listen(port, (req, res)=>console.log(`Server running on http://localhost:${port}`))
+const db = require ('./api/database/dbConfig');
+
+db.connetionToDatabase();
+db.DBSetting()
+
+server.listen(port, (req, res)=>console.log(`Servidor: OK || http://localhost:${port}`));
